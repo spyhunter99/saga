@@ -21,7 +21,7 @@ import com.google.common.collect.ImmutableSet;
  */
 public interface Config {
 
-    BrowserVersion DEFAULT_BROWSER_VERSION = BrowserVersion.FIREFOX_17;
+    BrowserVersion DEFAULT_BROWSER_VERSION = BrowserVersion.BEST_SUPPORTED;
     OutputStrategy DEFAULT_OUTPUT_STRATEGY = OutputStrategy.TOTAL;
     SortBy DEFAULT_SORT_BY = SortBy.COVERAGE;
     Order DEFAULT_ORDER = Order.DESC;

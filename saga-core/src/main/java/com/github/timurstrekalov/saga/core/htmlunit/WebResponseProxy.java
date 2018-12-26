@@ -8,6 +8,7 @@ import java.util.List;
 import com.gargoylesoftware.htmlunit.WebRequest;
 import com.gargoylesoftware.htmlunit.WebResponse;
 import com.gargoylesoftware.htmlunit.util.NameValuePair;
+import java.nio.charset.Charset;
 import org.apache.http.HttpStatus;
 
 class WebResponseProxy extends WebResponse {
@@ -69,12 +70,12 @@ class WebResponseProxy extends WebResponse {
     }
 
     @Override
-    public String getContentCharsetOrNull() {
+    public Charset getContentCharsetOrNull() {
         return delegate.getContentCharsetOrNull();
     }
 
     @Override
-    public String getContentCharset() {
+    public Charset getContentCharset() {
         return delegate.getContentCharset();
     }
 
@@ -84,7 +85,7 @@ class WebResponseProxy extends WebResponse {
     }
 
     @Override
-    public String getContentAsString(String encoding) {
+    public String getContentAsString(Charset encoding) {
         return delegate.getContentAsString(encoding);
     }
 
