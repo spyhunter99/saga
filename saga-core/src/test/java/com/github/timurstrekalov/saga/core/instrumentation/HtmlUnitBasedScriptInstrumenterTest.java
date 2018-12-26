@@ -20,7 +20,9 @@ import static org.mockito.Mockito.when;
 public class HtmlUnitBasedScriptInstrumenterTest {
 
 	private void assertEqualsIgnoreCRLF(String left, String right) {
-		assertEquals(left.replace("\r\n", "\n"), right.replace("\r\n", "\n"));
+                left = left.replaceAll("\\s+","");
+                right = right.replaceAll("\\s+","");
+		assertEquals(left, right);
 	}
 	
     private static final AtomicInteger evalCounter = new AtomicInteger();
